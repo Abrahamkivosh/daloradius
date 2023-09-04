@@ -271,6 +271,8 @@ function dbDeleteRecords($dbSocket, $tmpTableName) {
 }
 
 
+
+
 // connect to db
 $dbConn = databaseConnect();
 

@@ -97,8 +97,11 @@ $_input_descriptors3[] = array(
                                     'selected_value' => (isset($bi_changeuserbillinfo) && intval($bi_changeuserbillinfo) == 1) ? '1' : '0',
                               );
 
-$_input_descriptors3[] = array( 'caption' => t('all','BillStatus'), 'type' => 'text',  'name' => 'bi_billstatus',
-                               'value' => ((isset($bi_billstatus)) ? $bi_billstatus : ''), 'disabled' => true );
+$_input_descriptors3[] = array( 'caption' => t('all','BillStatus'), 'type' => 'select',  'name' => 'bi_billstatus',
+                                 'selected_value' => ((isset($bi_billstatus)) ? $bi_billstatus : ''),
+                                 'options' => array( 'Active', 'Suspended', 'Cancelled' ),
+                                    'disabled' => false );
+
 $_input_descriptors3[] = array( 'caption' => t('all','LastBill'), 'type' => 'text',  'name' => 'bi_lastbill',
                                'value' => ((isset($bi_lastbill)) ? $bi_lastbill : ''), 'disabled' => true );
 $_input_descriptors3[] = array( 'caption' => t('all','NextBill'), 'type' => 'text',  'name' => 'bi_nextbill',
